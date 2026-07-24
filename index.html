@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Peterson's Solution Simulator</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Peterson's Solution Simulator</h1>
+
+<p>Operating System Virtual Laboratory</p>
+
+</header>
+
+<div class="container">
+
+<div class="card">
+
+<h2>Simulation Controls</h2>
+
+<label>Select Turn</label>
+
+<select id="turn">
+
+<option value="0">Process 1</option>
+
+<option value="1">Process 2</option>
+
+</select>
+
+<div class="buttons">
+
+<button onclick="startSimulation()">Start</button>
+
+<button onclick="nextStep()">Next Step</button>
+
+<button onclick="resetSimulation()">Reset</button>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>Process Status</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Process</th>
+
+<th>Flag</th>
+
+<th>Status</th>
+
+</tr>
+
+</thead>
+
+<tbody id="statusTable">
+
+<tr>
+
+<td>P1</td>
+
+<td id="flag0">False</td>
+
+<td id="status0">Idle</td>
+
+</tr>
+
+<tr>
+
+<td>P2</td>
+
+<td id="flag1">False</td>
+
+<td id="status1">Idle</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+<div class="card">
+
+<h2>Critical Section</h2>
+
+<div id="criticalBox">
+
+Waiting for Simulation...
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>Execution Log</h2>
+
+<div id="logBox">
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>Algorithm</h2>
+
+<ol>
+
+<li>Process sets its flag = true.</li>
+
+<li>Turn is assigned to the other process.</li>
+
+<li>If other process wants to enter and turn belongs to it, wait.</li>
+
+<li>Enter Critical Section.</li>
+
+<li>Exit Critical Section.</li>
+
+<li>Set flag = false.</li>
+
+</ol>
+
+</div>
+
+</div>
+
+<footer>
+
+<p>Peterson's Solution Simulator | Operating System Project</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
