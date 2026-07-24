@@ -1,0 +1,202 @@
+/* ===========================
+   Peterson's Solution Simulator
+   Professional UI
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+}
+
+body{
+    background:#f5f3ff;
+    color:#333;
+}
+
+header{
+    background:linear-gradient(135deg,#6d28d9,#7c3aed);
+    color:white;
+    text-align:center;
+    padding:25px;
+    box-shadow:0 3px 10px rgba(0,0,0,.2);
+}
+
+header h1{
+    margin-bottom:8px;
+    font-size:32px;
+}
+
+header p{
+    font-size:16px;
+}
+
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:30px auto;
+}
+
+.card{
+    background:white;
+    margin-bottom:25px;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 8px 20px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-3px);
+}
+
+.card h2{
+    color:#6d28d9;
+    margin-bottom:18px;
+    border-left:5px solid #6d28d9;
+    padding-left:10px;
+}
+
+label{
+    display:block;
+    font-weight:bold;
+    margin-bottom:8px;
+}
+
+select,
+input{
+    width:100%;
+    padding:12px;
+    border:2px solid #d8b4fe;
+    border-radius:8px;
+    margin-bottom:18px;
+    font-size:15px;
+    outline:none;
+}
+
+select:focus,
+input:focus{
+    border-color:#7c3aed;
+}
+
+.buttons{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+button{
+    background:#6d28d9;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:.3s;
+    font-size:15px;
+}
+
+button:hover{
+    background:#5b21b6;
+    transform:scale(1.05);
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+}
+
+table th{
+    background:#6d28d9;
+    color:white;
+    padding:12px;
+}
+
+table td{
+    border:1px solid #ddd;
+    padding:12px;
+    text-align:center;
+}
+
+#criticalBox{
+    background:#ede9fe;
+    border:2px dashed #7c3aed;
+    padding:25px;
+    text-align:center;
+    font-size:18px;
+    border-radius:10px;
+    color:#4c1d95;
+    min-height:90px;
+}
+
+#logBox{
+    background:#faf5ff;
+    border:1px solid #d8b4fe;
+    border-radius:10px;
+    padding:15px;
+    min-height:220px;
+    overflow-y:auto;
+    font-family:Consolas, monospace;
+}
+
+.running{
+    color:#16a34a;
+    font-weight:bold;
+}
+
+.waiting{
+    color:#ea580c;
+    font-weight:bold;
+}
+
+.idle{
+    color:#64748b;
+    font-weight:bold;
+}
+
+.finished{
+    color:#2563eb;
+    font-weight:bold;
+}
+
+ol{
+    padding-left:20px;
+}
+
+ol li{
+    margin:10px 0;
+}
+
+footer{
+    background:#6d28d9;
+    color:white;
+    text-align:center;
+    padding:15px;
+    margin-top:40px;
+}
+
+@media(max-width:768px){
+
+.buttons{
+    flex-direction:column;
+}
+
+button{
+    width:100%;
+}
+
+table{
+    font-size:14px;
+}
+
+header h1{
+    font-size:24px;
+}
+
+.card{
+    padding:15px;
+}
+
+}
